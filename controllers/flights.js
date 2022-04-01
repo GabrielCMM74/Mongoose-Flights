@@ -10,7 +10,7 @@ function newFlight(req, res) {
   const newFlight = new Flight();
   departDefault = newFlight.departs;
   const departsDate = departDefault.toISOString().slice(0, 16);
-  res.render("flights/new", { departsDate });
+  res.render("flights/new", { departsDate, title: "Add Flight" });
 }
 
 function create(req, res){
@@ -23,7 +23,7 @@ function create(req, res){
 
 function index(req, res) {
     Flight.find({}, function (err, flights) {
-        res.render('flights/index', { flights });
+        res.render('flights/index', { flights, title: "Add Flight" });
     });
 }
 // function create(req, res){
