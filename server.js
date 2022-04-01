@@ -1,9 +1,11 @@
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('./config/database.js')
 var indexRouter = require('./routes/index');
 var flightsRouter = require('./routes/flights');
 
