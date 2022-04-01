@@ -13,14 +13,19 @@ function newFlight(req, res) {
   res.render("flights/new", { departsDate });
 }
 
-
-function create(req, res) {
-    const flight = new Flight(req.body);
-    flight.save(function (err) {
+function create(req, res){
+    Flight.create(req.body, function(err, flights){
         if (err) return res.render('flight/new');
         res.redirect('/');
-    });
+    })
 }
+// function create(req, res) {
+//     const flight = new Flight(req.body);
+//     flight.save(function (err) {
+//         if (err) return res.render('flight/new');
+//         res.redirect('/');
+//     });
+// }
 
 function index(req, res) {
     Flight.find({}, function (err, flights) {
