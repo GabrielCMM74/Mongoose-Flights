@@ -19,13 +19,7 @@ function create(req, res){
         res.redirect('/');
     })
 }
-// function create(req, res) {
-//     const flight = new Flight(req.body);
-//     flight.save(function (err) {
-//         if (err) return res.render('flight/new');
-//         res.redirect('/');
-//     });
-// }
+
 
 function index(req, res) {
     Flight.find({}, function (err, flights) {
@@ -42,5 +36,12 @@ function index(req, res) {
 //     Flight.find({}, function (err, flightDoc) {
 
 //         res.render('flights/index', { flights:flightDoc });
+//     });
+// }
+// function create(req, res) {
+//     const flight = new Flight(req.body);
+//     flight.save(function (err) {
+//         if (err) return res.render('flight/new');
+//         res.redirect('/');
 //     });
 // }
