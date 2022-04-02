@@ -42,11 +42,17 @@
         </tr>
       </thead>
       <tbody>
-        <% flight.destinations.forEach(function(dest) { %>
+        <% flight.destinations.sort((a, b) => a.arrival - b.arrival).forEach(function(dest) { %>
           <tr>
+            
             <td><%= dest.airport %></td>
             <td><%= dest.arrival.toLocaleDateString() %></td>
+            <div><form action="/flights/<%= dest._id %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button type="submit">Delete <%= dest.airport %>  <%= dest.arrival %></button>
+              </form></div>
           </tr>
+        
         <% }); %>
       </tbody>
     </table>
