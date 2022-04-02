@@ -7,12 +7,10 @@ module.exports = {
 function create(req, res){
     Flight.findById(req.params.id, function(err, flightDb){
 
-        // console.log(flightDb)
+        console.log(flightDb)
         flightDb.destinations.push(req.body);
       
-        // console.log(`This is the ${req.body}`)
-
-
+        console.log(req.body)
         flightDb.save(function (err) {
             res.redirect(`/flights/${flightDb._id}`)
         })
