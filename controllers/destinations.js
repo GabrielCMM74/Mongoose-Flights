@@ -9,7 +9,7 @@ function create(req, res){
 
         console.log(flightDb)
         flightDb.destinations.push(req.body);
-      
+        
         console.log(req.body)
         flightDb.save(function (err) {
             res.redirect(`/flights/${flightDb._id}`)
