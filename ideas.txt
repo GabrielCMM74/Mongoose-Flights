@@ -1,0 +1,4 @@
+ <div><form action="/flights/<%= dest._id %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button type="submit">Delete <%= dest.airport %>  <%= dest.arrival %></button>
+              </form></div>
