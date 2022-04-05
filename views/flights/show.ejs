@@ -43,6 +43,10 @@
          <tr>
           <td> Seat: <%= t.seat %></td>
            <td> Price: $<%= t.price%></td>
+           <td><form action="/flights/<%= flight._id %>/tickets/<%= t._id %>?_method=DELETE"
+            class="delete-form" method="POST">
+            <button type="submit">Delete Ticket <%= t.seat %> Price <%= t.price %></button>
+            </form></td>
        <% }); %>
     </tbody>
  </table>
@@ -86,8 +90,12 @@
           <tr>
             
             <td><%= dest.airport %></td>
-            <td><%= dest.arrival.toLocaleDateString() %></td>
-           
+            <td><%=  dest.arrival.toLocaleDateString()%></td>
+            <td><form action="/flights/<%= flight._id %>/destinations/<%= dest._id %>?_method=DELETE"
+            class="delete-form" method="POST">
+            <button type="submit">Delete <%= dest.airport %>  <%= dest.arrival %></button>
+            </form></td>
+
           </tr>
         
         <% }); %>

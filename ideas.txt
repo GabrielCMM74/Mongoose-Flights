@@ -2,3 +2,46 @@
                 class="delete-form" method="POST">
                 <button type="submit">Delete <%= dest.airport %>  <%= dest.arrival %></button>
               </form></div>
+
+
+So with post man you can just identify specific routes 
+make requests that help with api 
+res.send will detect the content temp 
+res.json will send json ({ msg: 'Whatever'})
+The net work tab will send quite a bit of information and relaod with cached showing not modified 
+
+can also do post request ensuring the middle ware from express is their for forms and json 
+can even get the content type/
+
+postman is basically just an amazing way to simulate what you are trying to do 
+You can create different routes depending on request of what is happening. 
+
+Another way of simulating post 
+
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded ({ extended: false }));
+app.post('/contact', (req, res) => {
+  if (!req.body.name) {
+    return res.status (400).send ( 'Name is required');
+ // DATABASE STUFF
+  res.status (201).send(Thank you ${req.body.namel);
+});\
+
+
+auth 
+
+app. post('/login', (req, res) => {
+ if(!req. header('x-auth-token')) {
+    return res.status(400).send ( 'No Token');
+ if(req. header ('x-auth-token') !== '123456') {
+    return res.status (401).send ( 'Not authorized');
+  }
+  res.send( 'Logged in');
+  
+
+  Yeah idk anymore. thought it was making sense but now im more confused so well f me. 
+  I need to understand routes much better
+  So yeah this is a thing 
+Its all good 
+So async can be written as function expressions. and more 
