@@ -40,8 +40,4 @@ app. post('/login', (req, res) => {
   res.send( 'Logged in');
   
 
-  Yeah idk anymore. thought it was making sense but now im more confused so well f me. 
-  I need to understand routes much better
-  So yeah this is a thing 
-Its all good 
-So async can be written as function expressions. and more 
+ 
