@@ -42,7 +42,6 @@ async function deleteDest(req, res) {
     //     flightId.destinations.remove(req.params.destinationId)
 
 
-    //     flightId.save(function(err){
     //         res.redirect(`/flights/${flightId._id}`)
     // //     })
     // }

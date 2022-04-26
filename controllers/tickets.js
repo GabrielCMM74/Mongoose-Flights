@@ -10,7 +10,7 @@ module.exports = {
 function create(req, res){
     Flight.findById(req.params.id, function(err, flightDocument){
         req.body.flight = flightDocument._id
-        console.log(flightDocument)
+        console.log(Ticket)
         Ticket.create(req.body, function(err, ticket){
             res.redirect(`/flights/${flightDocument._id}`)
         })
